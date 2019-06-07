@@ -1,4 +1,4 @@
-class GameListsController < ApplicationController
+class GameListsController < OpenReadController
   before_action :set_game_list, only: [:show, :update, :destroy]
 
   # GET /game_lists
