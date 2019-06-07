@@ -15,7 +15,7 @@ class GameListsController < OpenReadController
 
   # POST /game_lists
   def create
-    @game_list = GameList.new(game_list_params)
+    @game_list = current_user.game_lists.build(game_list_params)
 
     if @game_list.save
       render json: @game_list, status: :created, location: @game_list
@@ -41,7 +41,7 @@ class GameListsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_game_list
-      @game_list = GameList.find(params[:id])
+      @game_list = current_user.game_lists.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

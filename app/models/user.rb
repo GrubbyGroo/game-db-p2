@@ -3,5 +3,5 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
-  has_many :gamelists
+  has_many :game_lists
 end
