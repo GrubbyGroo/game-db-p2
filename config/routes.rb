@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   patch '/change-password' => 'users#changepw'
   get '/gamelist' => 'game_lists#index'
   get '/gamelist/id' => 'game_lists#show'
+  post '/gamelist' => 'game_lists#create'
 end
