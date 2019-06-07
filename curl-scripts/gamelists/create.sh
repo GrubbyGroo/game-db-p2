@@ -6,7 +6,12 @@ curl "http://localhost:4741/gamelist" \
   --header "Content-Type: application/json" \
   --data '{
     "game_list": {
-      "title": "'"${TITLE}"'"
+      "title": "'"${TITLE}"'",
+      "system": "'"${SYSTEM}"'",
+      "player_count": "'"${PLAYER}"'",
+      "sessions_count": "'"${SESSIONS}"'",
+      "description": "'"${DESC}"'",
+      "start_date": "'"${DATE}"'"
     }
   }'
 
