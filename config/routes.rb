@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   get '/gamelist' => 'game_lists#index'
   get '/gamelist/id' => 'game_lists#show'
   post '/gamelist' => 'game_lists#create'
+  delete '/gamelist/:id' => 'game_lists#destroy'
+  patch '/gamelist/:id' => 'game_lists#update'
 end
