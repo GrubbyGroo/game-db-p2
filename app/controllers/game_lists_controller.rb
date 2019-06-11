@@ -46,6 +46,6 @@ class GameListsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def game_list_params
-      params.require(:game_list).permit(:title, :string, :system, :player_count, :sessions_count, :description, :start_date)
+      params.require(:game_list).permit(:title, :system, :player_count, :sessions_count, :description, :start_date)
     end
 end
