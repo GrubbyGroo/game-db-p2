@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 # Connected Sites
-- Front End Repo: https://github.com/DiGregorioC/project-2-cd-client
+- Front-End Repo: https://github.com/DiGregorioC/project-2-cd-client
 - Application: https://digregorioc.github.io/project-2-cd-client/
 - Heroku Site: https://game-db-cdigregorio.herokuapp.com/
 
@@ -18,6 +18,14 @@
 - Ruby
 - Ruby On Rails
 - SCSS
+
+### About the Back-End
+  The back-end of this website is set up with two tables, in a one to many relationship.
+  One table for user accounts, which is added to upon each successful sign-up of a new user.
+  The second table, which is the many side of the relationship, is a table of table-top roleplaying games,
+  which each user can add to. Each user can have many games, but each game only belongs to one user. Any user
+  is able to see all of the games in the database, but can only edit and delete their own. All users are also able
+  to create new games to add to the database
 
 # Development Process
   This project was my first experince creating a full-stack website, with a backend and front end built by myself.
