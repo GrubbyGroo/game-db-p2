@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GameListsController < OpenReadController
   before_action :set_game_list, only: [:show, :update, :destroy]
 

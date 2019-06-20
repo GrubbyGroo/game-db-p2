@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_11_145020) do
+ActiveRecord::Schema.define(version: 2019_06_20_001526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(version: 2019_06_11_145020) do
     t.index ["user_id"], name: "index_game_lists_on_user_id"
   end
 
+  create_table "sessions", force: :cascade do |t|
+    t.integer "session_num"
+    t.date "session_date"
+    t.string "players"
+    t.text "summary"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "game_list_id"
+    t.index ["game_list_id"], name: "index_sessions_on_game_list_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "token", null: false
@@ -48,4 +59,5 @@ ActiveRecord::Schema.define(version: 2019_06_11_145020) do
 
   add_foreign_key "examples", "users"
   add_foreign_key "game_lists", "users"
+  add_foreign_key "sessions", "game_lists"
 end
