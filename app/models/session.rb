@@ -1,3 +1,3 @@
 class Session < ApplicationRecord
-  belongs_to :game_lists
+  belongs_to :game_list
 end
